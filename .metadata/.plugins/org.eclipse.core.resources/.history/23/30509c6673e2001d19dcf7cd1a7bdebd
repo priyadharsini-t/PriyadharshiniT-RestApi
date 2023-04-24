@@ -1,0 +1,20 @@
+package com.example.snap.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.snap.repository.SnapRepository;
+@Service
+
+public class SnapService {
+@Autowired
+public SnapRepository repobj;
+
+	public List<Snap> getAllSnap() {
+	List<Snap> snapList=repobj.findAll();
+		return snapList;
+	}
+
+}

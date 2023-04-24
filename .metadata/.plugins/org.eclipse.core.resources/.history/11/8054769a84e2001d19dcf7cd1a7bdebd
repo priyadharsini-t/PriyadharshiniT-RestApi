@@ -1,0 +1,29 @@
+package com.Snapchat.demo.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Snapchat.demo.Model.SnapModel;
+import com.Snapchat.demo.Service.SnapService;
+
+@RestController
+public class SnapController<Snap> {
+@Autowired
+ public SnapService serobj;
+@PostMapping("/pr")
+public SnapModel addDetails(@RequestBody SnapModel obj)
+{
+	return serobj.saveInfo(obj);
+}
+@GetMapping(value="/Sn")
+public List<SnapModel> getAllsnap()
+{
+	List<SnapModel>snaplist=serobj.getAllSnap();
+	return snaplist;
+}
+}

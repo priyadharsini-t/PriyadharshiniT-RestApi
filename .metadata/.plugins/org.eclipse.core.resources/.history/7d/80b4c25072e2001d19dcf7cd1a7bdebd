@@ -1,0 +1,5 @@
+package com.example.snap.repository;
+
+public interface SnapRepository {
+
+}

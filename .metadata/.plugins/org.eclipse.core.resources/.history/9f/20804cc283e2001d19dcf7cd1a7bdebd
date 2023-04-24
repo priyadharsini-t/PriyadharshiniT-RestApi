@@ -1,0 +1,21 @@
+package com.Snapchat.demo.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Snapchat.demo.Model.SnapModel;
+import com.Snapchat.demo.repository.SnapRepository;
+@Service
+
+public class SnapService {
+@Autowired
+public SnapRepository repobj;
+
+	public List<SnapModel> getAllSnap() {
+	List<SnapModel> snapList=repobj.findAll();
+		return snapList;
+	}
+
+}

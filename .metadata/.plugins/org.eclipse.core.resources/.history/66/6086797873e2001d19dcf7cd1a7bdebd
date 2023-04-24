@@ -1,0 +1,22 @@
+package com.example.snap.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.snap.service.SnapService;
+
+@RestController
+public class SnapController<Snap> {
+@Autowired
+ public SnapService serobj;
+
+@GetMapping(value="/Sn")
+public List<Snap> getAllsnap()
+{
+	List<Snap>snaplist=serobj.getAllSnap();
+	return snaplist;
+}
+}
