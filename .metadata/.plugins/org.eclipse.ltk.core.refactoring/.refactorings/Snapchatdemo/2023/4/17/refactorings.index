@@ -6,3 +6,7 @@
 1682327894116	Rename package 'com.example.snap.model'
 1682327920655	Rename package 'com.example.snap.controller'
 1682329467478	Rename type 'SnapModel'
+1682688438527	Delete element
+1682688839931	Encapsulate field 'id'
+1682688847018	Encapsulate field 'username'
+1682688853019	Encapsulate field 'password'
